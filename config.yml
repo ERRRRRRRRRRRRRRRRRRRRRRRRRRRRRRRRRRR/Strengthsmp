@@ -1,0 +1,36 @@
+# StrengthSMP configuration
+
+strength:
+  start: 0
+  min: -3                 # floor. Dying while at the floor triggers a death-ban (see death.deathban-at-min)
+  max: 5
+  kill-gain: 1            # strength gained for a PvP kill
+  death-loss: 1           # strength lost on death
+  pvp-deaths-only: true   # true = only deaths caused by another player change strength
+  damage-per-point: 0.10  # +10% melee damage per point (negative strength reduces damage, never below 0)
+  apply-to-mobs: true     # false = strength bonus only applies against players
+  anti-farm-seconds: 300  # killer gains nothing from the same victim again within this time (0 = off)
+
+death:
+  drop-token: true        # the strength a victim loses drops as Strength Token item(s)
+  deathban-at-min: true   # dying while already at min strength = death-ban
+  deathban-hours: 24      # 0 = banned until revived
+  revive-strength: 0      # strength a revived player comes back with
+
+withdraw:
+  enabled: true           # /strength withdraw turns strength into tradeable tokens
+  floor: 0                # cannot withdraw below this strength
+
+potions:
+  block-strength: true    # block vanilla Strength potions/effects (drink, splash, lingering, arrows, beacon)
+
+classes:
+  assignment: RANDOM      # RANDOM = assigned on first join, CHOOSE = player must pick with /strength class
+  allow-change: true
+
+abilities:
+  passive-unlock: 2       # strength needed for the class passive
+  ultimate-unlock: 4      # strength needed for the class ultimate (Sneak + F / swap-hands key)
+  passive-chance: 0.25
+  passive-internal-cooldown-seconds: 3
+  ultimate-cooldown-seconds: 60

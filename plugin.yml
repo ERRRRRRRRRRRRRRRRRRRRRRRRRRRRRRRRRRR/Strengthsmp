@@ -1,0 +1,19 @@
+name: StrengthSMP
+main: dev.strength.StrengthPlugin
+version: 1.0.0
+api-version: '1.21'
+description: Strength-scaling PvP progression with weapon classes, tokens and death-bans.
+
+commands:
+  strength:
+    description: Strength SMP command
+    aliases: [str, strengthsmp]
+    usage: /strength <get|top|class|withdraw|revive|set|add|give|reload>
+
+permissions:
+  strengthsmp.use:
+    description: Use player commands
+    default: true
+  strengthsmp.admin:
+    description: Use admin commands (set, add, give, free revive, reload)
+    default: op
